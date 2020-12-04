@@ -189,17 +189,19 @@ body {
         content: "";
         position: absolute;
         width: 100%;
-        height: 0;
+        height: 100%;
         top: 0;
         left: 0;
         background: #333;
         z-index: -1;
-        @include easeInOut();
+        transform: scaleY(0);
+        transform-origin: bottom;
+        transition: transform 0.7s;
       }
       &:hover {
         &::before {
-          height: 100%;
-          @include easeInOut();
+          transform: scaleY(1);
+          transform-origin: top;
         }
         color: #fff;
         @include easeInOut();
@@ -208,56 +210,62 @@ body {
   }
 }
 
+// dishes
 #dishes {
-  height: 80vh;
+  height: 70vh;
+  .title-head {
+    font-size: 22px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin: 30px 0;
+    position: relative;
 
-  .container {
-    .head-part {
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 250px;
+      background: $line-color;
+      top: 50%;
+      left: 20%;
+    }
+  }
+
+  .swiper-container {
+    height: 60vh;
+    width: 100%;
+  }
+
+  .swiper-slide {
+    width: 300px;
+
+    img {
+      width: 100%;
+      height: 203px;
+      object-fit: cover;
+    }
+    .name-rate {
       display: flex;
       justify-content: space-between;
+      margin: 10px 0;
 
-      .map {
-        & > button {
-          all: unset;
-          background: #dedede;
-          cursor: pointer;
-          margin: 0 3px;
-          position: relative;
-          user-select: none;
-          @include circle(8px);
-
-          &.active {
-            background: #aeaeae;
-            transform: scale(1.2);
-          }
-        }
+      h3 {
+        opacity: 0.7;
+        font-size: 18px;
+        font-weight: 500;
       }
     }
-
-    .inner {
-      width: 100%;
-      display: flex;
-      overflow: hidden;
-
-      .card {
-        &:nth-child(2) {
-          background-color: blue;
-        }
-
-        .content-box {
-          margin-top: 10px;
-
-          .name-rate {
-            display: flex;
-            justify-content: space-between;
-          }
-          .rating {
-            margin-top: 15px;
-            color: yellow;
-          }
-        }
-      }
+    .fa-star {
+      color: #f5bb1b;
     }
+  }
+  .swiper-pagination {
+    position: absolute;
+    bottom: 20%;
+  }
+  .swiper-pagination-bullet-active {
+    background: #696767;
+    transform: scale(1.4);
   }
 }
 

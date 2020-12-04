@@ -4,12 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+
     <!-- Css file -->
     <link rel="stylesheet" href="css/main.css" />
 
-    <!-- Slick -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" />
+    <!-- swiper js -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    
     <title>Resto</title>
   </head>
   <body>
@@ -128,146 +134,75 @@
       
     </section>
 
-    <!-- dishes -->
+    <!-- Dishes -->
     <section id="dishes">
       <div class="container">
-        <div class="head-part">
-          <h3 class="title-head">featured dishes</h3>
-          <div class="map">
-            <button class="active first"></button>
-            <button class="second"></button>
-            <button class="third"></button>
-            <button class="fourth"></button>
-          </div>
-        </div>
-        <div class="inner">
-          <div class="card">
-            <img src="img/slide1.png" alt="">
-            <div class="content-box">
+        <h3 class="title-head">
+          Featured Dishes
+        </h3>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img/slide1.png" alt="dish-1">
               <div class="name-rate">
-                <span>Fugiat nulla sint</span>
-                <span>$30</span>
+                <h3 class="dish-name">Fugiat nulla sint</h3>
+                <h3 class="dish-price">$30</h3>
               </div>
-              <div class="rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+              <div class="star-rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="far fa-star"></i>
               </div>
             </div>
-          </div>
-          <div class="card">
-            <img src="img/slide2.png" alt="">
-            <div class="content-box">
+            <div class="swiper-slide">
+              <img src="img/slide2.png" alt="dish-1">
               <div class="name-rate">
-                <span>Fugiat nulla sint</span>
-                <span>$30</span>
+                <h3 class="dish-name">Daute irure dolor</h3>
+                <h3 class="dish-price">$24</h3>
               </div>
-              <div class="rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+              <div class="star-rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
               </div>
             </div>
-          </div>
-          <div class="card">
-            <img src="img/slide3.png" alt="">
-            <div class="content-box">
+            <div class="swiper-slide">
+              <img src="img/slide3.png" alt="dish-1">
               <div class="name-rate">
-                <span>Fugiat nulla sint</span>
-                <span>$30</span>
+                <h3 class="dish-name">Officia deserunt mollit</h3>
+                <h3 class="dish-price">$60</h3>
               </div>
-              <div class="rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+              <div class="star-rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="far fa-star"></i>
               </div>
             </div>
-          </div>
-          <div class="card">
-            <img src="img/slide4.png" alt="">
-            <div class="content-box">
+            <div class="swiper-slide">
+              <img src="img/slide4.png" alt="dish-1">
               <div class="name-rate">
-                <span>Fugiat nulla sint</span>
-                <span>$30</span>
+                <h3 class="dish-name"></h3>
+                <h3 class="dish-price">$17</h3>
               </div>
-              <div class="rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+              <div class="star-rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="far fa-star"></i>
               </div>
             </div>
+            
+           
           </div>
-          <div class="card">
-            <img src="img/slide1.png" alt="">
-            <div class="content-box">
-              <div class="name-rate">
-                <span>Fugiat nulla sint</span>
-                <span>$30</span>
-              </div>
-              <div class="rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <img src="img/slide2.png" alt="">
-            <div class="content-box">
-              <div class="name-rate">
-                <span>Fugiat nulla sint</span>
-                <span>$30</span>
-              </div>
-              <div class="rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <img src="img/slide3.png" alt="">
-            <div class="content-box">
-              <div class="name-rate">
-                <span>Fugiat nulla sint</span>
-                <span>$30</span>
-              </div>
-              <div class="rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <img src="img/slide4.png" alt="">
-            <div class="content-box">
-              <div class="name-rate">
-                <span>Fugiat nulla sint</span>
-                <span>$30</span>
-              </div>
-              <div class="rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-            </div>
+          <div class="swiper-pagination">
+            
           </div>
         </div>
       </div>
@@ -337,11 +272,14 @@
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-    <!-- slick js -->
+   
     
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="js/query.js"></script>
+    <!-- swwiper js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
     <script src="js/main.js"></script>
+
+    
     <script src="js/fontAwesome.js"></script>
   </body>
 </html>
