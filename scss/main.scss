@@ -1,0 +1,374 @@
+@import url(https://fonts.googleapis.com/css?family=Aleo:300,300italic,regular,italic,700,700italic);
+
+$primmary-color: #f34949;
+$line-color: #c4bbbba2;
+$footer-bg: #3b3b3b;
+
+@mixin easeInOut {
+  transition: 0.3s ease-in-out;
+}
+
+@mixin circle($i) {
+  border-radius: 100%;
+  height: $i;
+  width: $i;
+}
+
+@font-face {
+  font-family: "WCManoNegraBta";
+  src: local("WCManoNegraBta.ttf"), url("WCManoNegraBta.ttf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Aleo", sans-serif;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 120px;
+  background: #fff;
+
+  .logo {
+    cursor: pointer;
+  }
+
+  .menu-nav {
+    display: flex;
+
+    .nav-item {
+      list-style: none;
+      color: #333;
+      margin: 0 15px;
+
+      .nav-links {
+        text-decoration: none;
+        color: inherit;
+        padding: 10px;
+
+        &:hover {
+          background: #333;
+          color: #fff;
+          @include easeInOut();
+        }
+      }
+    }
+  }
+}
+
+#hero {
+  background: linear-gradient(rgba(43, 40, 40, 0.801), rgba(43, 40, 40, 0.801)),
+    url("../img/hero.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-bottom: 2px solid $primmary-color;
+
+  .hero-content {
+    h1 {
+      text-align: center;
+      font-size: 100px;
+      font-family: "WCManoNegraBta";
+    }
+    p {
+      font-size: 16px;
+      text-align: center;
+      position: relative;
+      font-weight: 300;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 1px;
+        left: 28%;
+        top: 50%;
+        background: #fff;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 1px;
+        right: 28%;
+        top: 50%;
+        background: #fff;
+      }
+    }
+  }
+}
+#menu {
+  margin-bottom: 80px;
+
+  .menu-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    .menu-shape {
+      width: 0;
+      height: 0;
+      position: relative;
+      border-right: solid 80px;
+      border-left: solid 80px;
+      border-top: solid 40px;
+      border-bottom: solid 25px;
+      border-color: $primmary-color $primmary-color transparent $primmary-color;
+    }
+    h5 {
+      position: absolute;
+      top: 20%;
+      font-size: 20px;
+      color: #fff;
+    }
+  }
+
+  .menu-list {
+    display: flex;
+    justify-content: space-around;
+    margin: 90px 0;
+
+    .item-1,
+    .item-2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 30px 0;
+
+      h3 {
+        font-size: 18px;
+        opacity: 0.7;
+      }
+
+      small {
+        font-size: 12px;
+        opacity: 0.5;
+      }
+      strong {
+        opacity: 0.7;
+      }
+
+      .line {
+        width: 180px;
+        height: 1px;
+        background: $line-color;
+        margin: 0 15px;
+      }
+    }
+  }
+  .lower-btn {
+    text-align: center;
+    a {
+      color: #333;
+      opacity: 0.6;
+      text-decoration: none;
+      border: 1px solid rgba(51, 51, 51, 0.541);
+      padding: 10px 12px;
+      z-index: 1;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 0;
+        top: 0;
+        left: 0;
+        background: #333;
+        z-index: -1;
+        @include easeInOut();
+      }
+      &:hover {
+        &::before {
+          height: 100%;
+          @include easeInOut();
+        }
+        color: #fff;
+        @include easeInOut();
+      }
+    }
+  }
+}
+
+#dishes {
+  height: 80vh;
+
+  .container {
+    .head-part {
+      display: flex;
+      justify-content: space-between;
+
+      .map {
+        & > button {
+          all: unset;
+          background: #dedede;
+          cursor: pointer;
+          margin: 0 3px;
+          position: relative;
+          user-select: none;
+          @include circle(8px);
+
+          &.active {
+            background: #aeaeae;
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+
+    .inner {
+      width: 100%;
+      display: flex;
+      overflow: hidden;
+
+      .card {
+        &:nth-child(2) {
+          background-color: blue;
+        }
+
+        .content-box {
+          margin-top: 10px;
+
+          .name-rate {
+            display: flex;
+            justify-content: space-between;
+          }
+          .rating {
+            margin-top: 15px;
+            color: yellow;
+          }
+        }
+      }
+    }
+  }
+}
+
+#gallery {
+  .container {
+    .title-head {
+      font-size: 22px;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin: 30px 0;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 250px;
+        background: $line-color;
+        top: 50%;
+        left: 15%;
+      }
+    }
+    .gallery-items {
+      display: grid;
+      grid-template-areas:
+        "a b c"
+        "a d e";
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .item1 {
+      grid-area: a;
+      width: 366px;
+      height: 438px;
+    }
+    .item2 {
+      grid-area: b;
+      width: 370px;
+      height: 219px;
+    }
+    .item3 {
+      grid-area: c;
+      width: 370px;
+      height: 219px;
+    }
+    .item4 {
+      grid-area: d;
+      width: 370px;
+      height: 219px;
+    }
+    .item5 {
+      grid-area: e;
+      width: 370px;
+      height: 219px;
+    }
+
+    .gall-item:hover {
+      img {
+        transform: scale(0.9);
+        cursor: pointer;
+        @include easeInOut();
+      }
+    }
+
+    .gall-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include easeInOut();
+    }
+  }
+}
+
+#footer {
+  margin-top: 90px;
+  background: $footer-bg;
+  .container {
+    .footer {
+      padding: 50px 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      li {
+        list-style: none;
+        margin: 8px 0;
+        color: #fff;
+        opacity: 0.8;
+      }
+      .light {
+        font-weight: 100;
+      }
+      .links {
+        li {
+          a {
+            color: inherit;
+            text-decoration: none;
+          }
+        }
+      }
+      .copyright {
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+
+      .logo-bottom {
+        color: #fff;
+        font-family: "WCManoNegraBta";
+        font-size: 34px;
+      }
+    }
+  }
+}
